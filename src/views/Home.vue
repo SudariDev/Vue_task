@@ -8,12 +8,12 @@
     <h2>{{number1+number2}}</h2> -->
 
     <!--form data binding-->
-    <input type="number" v-model="number">
+    <input type="number" v-model="amount">
     <!-- <input type="number" v-model.number="number2"> -->
     <button @click="Increase_Qua">Increse_qua</button>
 
     amount: {{amount}}
-    Quantity: {{Quantity}}
+    Quantity: {{quantity}}
     Subtot: {{Subtot}}
 
     <button @click="Clear">Clear</button>
@@ -47,7 +47,7 @@ methods:{
   Increase_Qua(){
     
     this.quantity++
-    this.Subtot = this.Increase_Qua * amount
+    this.Subtot = this.quantity * this.amount
 
 
     }
